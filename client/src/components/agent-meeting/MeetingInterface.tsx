@@ -7,7 +7,7 @@ import { AgentAudioPlayer } from "./AgentAudioPlayer";
 import { VITE_VIDEOSDK_TOKEN, VITE_API_URL } from "./types";
 import { MicrophoneWithWaves } from "./MicrophoneWithWaves";
 import MicWithSlash from "../icons/MicWithSlash";
-import { BlueGradientAvatar } from "./BlueGradientAvatar";
+import { ThreeJSAvatar } from "./ThreeJSAvatar";
 import { RoomLayout } from "../layout/RoomLayout";
 import { CustomButton } from "./CustomButton";
 import { BlueGradientButton } from "./BlueGradientButton";
@@ -363,7 +363,7 @@ export const MeetingInterface: React.FC<MeetingInterfaceProps> = ({
       <div className="flex flex-col items-center justify-center min-h-screen bg-transparent relative">
         {/* Fixed Avatar Position - Higher up with larger gap */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -translate-y-40">
-          <BlueGradientAvatar
+          <ThreeJSAvatar
             participantId={agentParticipantId}
             isConnected={isJoined}
             className=""

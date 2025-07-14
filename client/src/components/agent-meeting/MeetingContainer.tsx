@@ -2,7 +2,7 @@ import React from "react";
 import { AgentSettings } from "./types";
 import { RoomLayout } from "../layout/RoomLayout";
 import { MicrophoneWithWaves } from "./MicrophoneWithWaves";
-import { BlueGradientAvatar } from "./BlueGradientAvatar";
+import { ThreeJSAvatar } from "./ThreeJSAvatar";
 import { Button } from "../ui/button";
 import { CustomButton } from "./CustomButton";
 import { BlueGradientButton } from "./BlueGradientButton";
@@ -23,7 +23,7 @@ export const MeetingContainer: React.FC<MeetingContainerProps> = ({
       <div className="flex flex-col items-center justify-center min-h-screen bg-transparent relative">
         {/* Fixed Avatar Position - Higher up with larger gap */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -translate-y-40">
-          <BlueGradientAvatar isConnected={false} className="" size="xl" />
+          <ThreeJSAvatar isConnected={false} className="" size="xl" />
         </div>
 
         {/* Fixed Control Panel Position - Lower down with larger gap */}
