@@ -9,7 +9,7 @@ const AgentMeeting: React.FC = () => {
   const [meetingId, setMeetingId] = useState<string | null>(null);
   const [isConnecting, setIsConnecting] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
-  
+
   // Default agent settings - all values passed by default
   const [agentSettings] = useState<AgentSettings>({
     model: "gemini-2.0-flash-live-001",
@@ -22,7 +22,7 @@ const AgentMeeting: React.FC = () => {
 
   const createMeeting = async () => {
     try {
-      console.log("Creating meeting with token:", VITE_VIDEOSDK_TOKEN);
+      // console.log("Creating meeting with token:", VITE_VIDEOSDK_TOKEN);
 
       const response = await fetch("https://api.videosdk.live/v2/rooms", {
         method: "POST",
@@ -36,7 +36,7 @@ const AgentMeeting: React.FC = () => {
 
       if (response.ok) {
         const data = await response.json();
-        console.log("Meeting created successfully:", data);
+        // console.log("Meeting created successfully:", data);
         setMeetingId(data.roomId);
         return data.roomId;
       } else {

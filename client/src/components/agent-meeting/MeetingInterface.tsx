@@ -11,6 +11,7 @@ import { ThreeJSAvatar } from "./ThreeJSAvatar";
 import { RoomLayout } from "../layout/RoomLayout";
 import { CustomButton } from "./CustomButton";
 import { BlueGradientButton } from "./BlueGradientButton";
+import { GradientButton } from "./GradientButton";
 
 interface MeetingInterfaceProps {
   meetingId: string;
@@ -374,24 +375,20 @@ export const MeetingInterface: React.FC<MeetingInterfaceProps> = ({
         {/* Fixed Control Panel Position - Lower down with larger gap */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 translate-y-24">
           <div className="flex items-center justify-center space-x-4">
-            {/* Microphone Control */}
-            <Button
+            {/* Microphone Control - Hidden as requested */}
+            {/* <Button
               onClick={handleToggleMic}
               size="lg"
               className="w-12 h-8 bg-[#1F1F1F] hover:bg-[#1F1F1F]"
               disabled={!isJoined}
             >
               <MicWithSlash disabled={!micEnabled} />
-            </Button>
+            </Button> */}
 
             {/* Disconnect Button */}
-            <Button
-              onClick={handleDisconnect}
-              variant="destructive"
-              className="px-6 py-3 bg-[#380b0b] hover:bg-[#380b0b] text-[#a13f3f]"
-            >
-              Disconnect
-            </Button>
+            <GradientButton onClick={handleDisconnect} variant="primary">
+              Press to stop
+            </GradientButton>
 
             {/* Fixed space for retry button to prevent layout shift */}
             {connectionError && !isRetrying && retryAttempts < maxRetries && (

@@ -6,6 +6,7 @@ body,
 html,
 #root {
   background: transparent !important;
+  /* background-color: black; */
 }
 
 @layer base {

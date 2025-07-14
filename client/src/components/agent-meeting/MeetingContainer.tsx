@@ -6,6 +6,7 @@ import { ThreeJSAvatar } from "./ThreeJSAvatar";
 import { Button } from "../ui/button";
 import { CustomButton } from "./CustomButton";
 import { BlueGradientButton } from "./BlueGradientButton";
+import { GradientButton } from "./GradientButton";
 
 interface MeetingContainerProps {
   onConnect: () => void;
@@ -29,14 +30,14 @@ export const MeetingContainer: React.FC<MeetingContainerProps> = ({
         {/* Fixed Control Panel Position - Lower down with larger gap */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 translate-y-24">
           <div className="flex items-center justify-center">
-            {/* Connect Button - Back to Original Style */}
-            <Button
+            {/* Connect Button - New Gradient Style */}
+            <GradientButton
               onClick={onConnect}
               disabled={isConnecting}
-              className="px-8 py-3 bg-[#0b3820] hover:bg-[#0b3820] text-[#3fa16d]"
+              variant="primary"
             >
-              {isConnecting ? "Connecting..." : "Connect"}
-            </Button>
+              {isConnecting ? "Give it a sec!" : "Give it a try!"}
+            </GradientButton>
           </div>
         </div>
       </div>
