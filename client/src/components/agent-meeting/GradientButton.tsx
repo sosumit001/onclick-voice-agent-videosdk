@@ -14,7 +14,7 @@ const GradientButton = React.forwardRef<HTMLButtonElement, GradientButtonProps>(
         className={cn(
           // Base styles matching Figma specs
           "flex items-center justify-center",
-          "w-60 h-[62px] sm:w-60 sm:h-[62px]", // 240px width, 62px height - responsive
+          "w-[180px] h-[62px] sm:w-60 sm:h-[62px]", // 240px width, 62px height - responsive
           "px-4 py-3 sm:px-[34.617px] sm:py-[27.49px]", // Responsive padding
           "rounded-[160px]", // Full rounded pill shape
           "font-inter text-xl font-medium leading-[150%]", // 20px font-size, 500 weight, 150% line-height
