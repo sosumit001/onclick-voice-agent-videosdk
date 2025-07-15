@@ -374,7 +374,8 @@ export const MeetingInterface: React.FC<MeetingInterfaceProps> = ({
 
         {/* Status Text - Positioned in the gap between avatar and button */}
         {(() => {
-          const isConnecting = isRetrying || (agentInvited && !agentJoined);
+          const isConnecting =
+            !isJoined || isRetrying || (agentInvited && !agentJoined);
           let statusText = "";
 
           if (isConnecting) {
