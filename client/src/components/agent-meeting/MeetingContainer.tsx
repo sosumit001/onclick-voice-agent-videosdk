@@ -27,6 +27,26 @@ export const MeetingContainer: React.FC<MeetingContainerProps> = ({
           <ThreeJSAvatar isConnected={false} className="" size="xl" />
         </div>
 
+        {/* Status Text - Positioned in the gap between avatar and button */}
+        {isConnecting && (
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -translate-y-8">
+            <div
+              style={{
+                color: "white",
+                fontSize: "16px",
+                fontWeight: "500",
+                textAlign: "center",
+                pointerEvents: "none",
+                textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)",
+                userSelect: "none",
+              }}
+              className="text-base font-medium"
+            >
+              connecting...
+            </div>
+          </div>
+        )}
+
         {/* Fixed Control Panel Position - Lower down with larger gap */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 translate-y-24">
           <div className="flex items-center justify-center">
