@@ -30,6 +30,12 @@ const AgentMeeting: React.FC = () => {
           Authorization: VITE_VIDEOSDK_TOKEN,
           "Content-Type": "application/json",
         },
+        body: JSON.stringify({
+          autoCloseConfig: {
+            type: "session-end-and-deactivate",
+            duration: 300,
+          },
+        }),
       });
 
       console.log("API Response status:", response.status);

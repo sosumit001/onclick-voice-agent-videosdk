@@ -17,7 +17,7 @@ const GradientButton = React.forwardRef<HTMLButtonElement, GradientButtonProps>(
           "w-[180px] h-[62px] sm:w-60 sm:h-[62px]", // 240px width, 62px height - responsive
           "px-4 py-3 sm:px-[34.617px] sm:py-[27.49px]", // Responsive padding
           "rounded-[160px]", // Full rounded pill shape
-          "font-inter text-xl font-medium leading-[150%]", // 20px font-size, 500 weight, 150% line-height
+          "font-inter text-base font-medium leading-[150%]", // 20px font-size, 500 weight, 150% line-height
           "transition-all duration-200 ease-in-out",
           "hover:scale-105 active:scale-95",
 
